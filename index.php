@@ -4,13 +4,16 @@ include 'header.php';
 
 ?>
     <?php
+    // Check user is connected
     if (!empty($_SESSION['pseudo'])) {
       $create = $bdd->prepare('SELECT * FROM newacc WHERE id = :idtake');
       $create->execute(array(
         'idtake' => $_SESSION['id']
       ));
       $create = $create->fetch();
+      // if user is connected check the user id and check is he's connected
       if ($create['verif_connect'] == 0) {
+        // if it's rayteur connected(admin) he can create billets
         if ($_SESSION['pseudo'] == "Rayteur") {
           echo '<form class="col-12 text-center pb-2 pt-2" action="addblog.php" method="post">
                <input type="submit" name="addblog" value="Ajouter page blog">

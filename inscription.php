@@ -12,10 +12,15 @@ require('config.php');
     <input type="submit" value="S'inscrire">
   </form>
   <?php
+  // Check if the pseudo password and mail is no't empty
     if (!empty($_POST['pseudo']) AND !empty($_POST['mdp']) AND !empty($_POST['mail'])) {
+      // Security for mail
       if (preg_match("#[a-z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$#", $_POST['mail'])) {
+        // Security for pseudo
         if (preg_match("#[a-z0-9._-]#", $_POST['pseudo'])) {
+          // Security for password
           if (preg_match("#[a-z0-9._-]#", $_POST['mdp'])) {
+            // if all security passed, push the information of the user in bdd for create account
             $create = $bdd->prepare("INSERT INTO newacc (user_name, user_mail, user_password, verif_connect) VALUES (:name, :mail, :password, :connect)");
             $create->execute(array(
               'name' => $_POST['pseudo'],
@@ -23,7 +28,9 @@ require('config.php');
               'password' => password_hash($_POST['mdp'], PASSWORD_DEFAULT),
               'connect' => 1
             ));
+            // take the id of the user
             $lastid = $bdd->lastInsertId();
+            // select the user by the id for create session of him
               $create = $bdd->query('SELECT * FROM newacc WHERE id=' . $lastid . '');
               $create = $create->fetchAll();
               foreach ($create as $key => $value) {
