@@ -24,14 +24,14 @@ include 'header.php';
           echo "<a class='col-6 mx-auto' href='viewcom.php?blog=" . $value['id'] . "'>
           <div class='col-12 mx-auto blogcreate mt-2'>
           <div class='col-12 titlecom'>
-          <h1>" . $value['title'] . "</h1>
+          <p class='namebillettitle'>Titre: " . $value['title'] . "</p>
           </div>
           <div class='col-12 row'>
           <div class='col-12 name m-0'>
-          <h2>" . $value['pseudo'] . "</h2>
+          <p>Message: <br>" . $value['message'] . "</h2>
           </div>
           <div class='col-12 pl-4 pt-2'>
-          <p>" . $value['message'] . "</p>
+          <p class='namebilletpseudo'>Écris par: " . $value['pseudo'] . "</p>
           </div>
           </div>
           </div></a>";

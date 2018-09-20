@@ -122,6 +122,14 @@ textarea {
      text-decoration: none;
    }
 
+   .namebilletpseudo{
+     font-size: 15px;
+   }
+
+   .namebillettitle{
+     font-size: 30px;
+   }
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
