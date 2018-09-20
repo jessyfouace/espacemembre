@@ -28,17 +28,21 @@
         </div>
         <div class="col-2 pt-2 pb-2">
             <?php
+            // Check if pseudo is no't empty
             if (!empty($_SESSION['pseudo'])) {
+              // check bdd and take the user information
             $create = $bdd->prepare('SELECT * FROM newacc WHERE id = :idtake');
             $create->execute(array(
               'idtake' => $_SESSION['id']
             ));
             $create = $create->fetchAll();
+            // Foreach for check if the user is connected or no
             foreach ($create as $key => $value) {
               if ($value['verif_connect'] == 0) {
                 echo "<a href='deconnexion.php'>Se Déconnecter</a>";
               }
             }
+            // if the user is no't connected make se connecter
           }else {
                 echo "<a href='inscription.php'>Se connecter</a>";
             }
