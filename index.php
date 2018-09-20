@@ -11,7 +11,7 @@ include 'header.php';
       ));
       $create = $create->fetch();
       if ($create['verif_connect'] == 0) {
-        if ($_SESSION['pseudo'] == "Rayteur" AND $_SESSION['mdp'] == "test") {
+        if ($_SESSION['pseudo'] == "Rayteur") {
           echo '<form class="col-12 text-center pb-2 pt-2" action="addblog.php" method="post">
                <input type="submit" name="addblog" value="Ajouter page blog">
                </form>';
