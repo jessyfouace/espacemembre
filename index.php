@@ -28,7 +28,7 @@ include 'header.php';
           </div>
           <div class='col-12 row'>
           <div class='col-12 name m-0'>
-          <p>Message: <br>" . $value['message'] . "</h2>
+          <p>Message: <br>" . $value['message'] . "</p>
           </div>
           <div class='col-12 pl-4 pt-2'>
           <p class='namebilletpseudo'>Écris par: " . $value['pseudo'] . "</p>
