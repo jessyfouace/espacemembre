@@ -1,29 +1,18 @@
-
-<snippet>
-  <content><![CDATA[
-
-
-"Yes We Web" project developed in group, it's a shopwindow developped in PHP with associative array.
+# Project Name
+Member space
 
 ## Contributing
-
 1. Fork it!
-2. Create your feature branch: git checkout -b my-new-feature
-3. Commit your changes: git commit -am 'Add some feature'
-4. Push to the branch: git push origin my-new-feature
-5. Submit a pull request :D
+2. Create your feature branch: `git checkout -b my-new-feature`
+3. Commit your changes: `git commit -am 'Add some feature'`
+4. Push to the branch: `git push origin my-new-feature`
+5. Submit a pull request
 
-## History
+## Restriction
 
+We have to create a member space, with connexion on PHP SQL BDD, user can create account, post a message
+but can't create a billet (only admin can)
 
+## Creators
 
-## Credits
-
-Paul Decoux, Nicolas Hallaert.
-
-## License
-
-
-</content>
-  <tabTrigger>readme</tabTrigger>
-</snippet>
+Jessy
