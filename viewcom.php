@@ -17,19 +17,18 @@ if ($resultblog->rowCount() ==1) {
 ?>
     <?php
     if (!empty($_SESSION['pseudo'])) {
-      echo "<div class='col-6 mx-auto blogcreate mt-2'>
-        <div class='col-12 titlecom'>
-          <h1>"; echo $title; echo "</h1>
-          <p>test</p>
-        </div>
-        <div class='col-12 row'>
-          <div class='col-12 name m-0'>
-            <h2>"; echo $pseudo; echo "</h2>
-          </div>
-          <div class='col-12 pl-4 pt-2'>
-            <p>"; echo $message; echo "</p>
-          </div>
-        </div>
+      echo "<div class='colorbillet col-12 mx-auto blogcreate mt-2'>
+      <div class='col-12 titlecom'>
+      <p class='namebillettitle'>Titre: " . $title . "</p>
+      </div>
+      <div class='col-12 row'>
+      <div class='col-12 name m-0'>
+      <p>Message: <br>" . $message . "</p>
+      </div>
+      <div class='col-12 pl-4 pt-2'>
+      <p class='namebilletpseudo'>Écris par: " . $pseudo . "</p>
+      </div>
+      </div>
       </div>";
 
 

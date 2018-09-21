@@ -14,7 +14,7 @@ include 'header.php';
       // if user is connected check the user id and check is he's connected
       if ($create['verif_connect'] == 0) {
         // if it's rayteur connected(admin) he can create billets
-        if ($_SESSION['pseudo'] == "Rayteur") {
+        if ($_SESSION['id'] == "242") {
           echo '<form class="col-12 text-center pb-2 pt-2" action="addblog.php" method="post">
                <input type="submit" name="addblog" value="Ajouter page blog">
                </form>';
@@ -22,10 +22,10 @@ include 'header.php';
         // Select the blog
         $reponse = $bdd->query('SELECT * FROM blogcommentaire ORDER BY id DESC LIMIT 5');
         // see all blog with the foreach (don't need to fetch because only 1 with this id)
-        echo '<div class="col-6 mx-auto">';
+        echo '<div class="col-12 col-md-6 mx-auto">';
         foreach ($reponse as $key => $value) {
           echo "<a class='col-6 mx-auto' href='viewcom.php?blog=" . $value['id'] . "'>
-          <div class='col-12 mx-auto blogcreate mt-2'>
+          <div class='colorbillet col-12 mx-auto blogcreate mt-2'>
           <div class='col-12 titlecom'>
           <p class='namebillettitle'>Titre: " . $value['title'] . "</p>
           </div>
