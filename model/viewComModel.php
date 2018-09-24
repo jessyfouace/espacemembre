@@ -18,7 +18,7 @@ if ($resultblog->rowCount() ==1) {
       <div class='col-12 titlecom'>
       <p class='namebillettitle'>Titre: " . $title . "</p>
       </div>
-      <div class='col-12 row'>
+      <div class='col-12 row m-0 p-0'>
       <div class='col-12 name m-0'>
       <p>Message: <br>" . $message . "</p>
       </div>
@@ -40,10 +40,10 @@ if ($resultblog->rowCount() ==1) {
      foreach ($resultcom as $key => $value) {
       echo "<div class='col-12 col-md-8 col-lg-6 mx-auto blogcreate m-0 mt-2 p-0 mb-2'>
         <div class='col-12 row colorbillet m-0 p-0'>
-          <div class='col-12 name m-0'>
+          <div class='col-12 name m-0 textlong'>
             <h2>" . $value['nicknamecom'] . "</h2>
           </div>
-          <div class='col-12 pl-4 pt-2'>
+          <div class='col-12 pl-4 pt-2 textlong'>
             <p>" . $value['messagecom'] . "</p>
           </div>
         </div>

@@ -24,7 +24,7 @@ if (!empty($_SESSION['pseudo'])) {
       <div class='col-12 titlecom'>
       <p class='namebillettitle'>Titre: " . $value['title'] . "</p>
       </div>
-      <div class='col-12 row'>
+      <div class='col-12 row m-0 p-0'>
       <div class='col-12 name m-0'>
       <p>Message: <br>" . $value['message'] . "</p>
       </div>
