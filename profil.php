@@ -1,6 +1,7 @@
 <?php
 //include header page//
 include 'header.php';
-require('model/viewComModel.php');
+require('config.php');
+require('model/profilModel.php');
 include 'footer.html';
 ?>

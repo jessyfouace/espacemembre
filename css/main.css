@@ -110,6 +110,15 @@ textarea {
 
    body{
      color: black;
+     background-color: #f8f9fa;
+   }
+
+   .colorbillet{
+     background-color: white;
+   }
+
+   #profil:hover{
+     cursor: pointer;
    }
 
    a{

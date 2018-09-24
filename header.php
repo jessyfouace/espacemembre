@@ -9,24 +9,25 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 
     <header class="row m-0" style="background-color: orange">
       <div class="col-12 w-100 m-0 row text-center">
-        <div class="col-2 pt-2 pb-2">
-            <p>LOGO</p>
+        <div class="d-none d-md-block col-md-2 pt-2 pb-2">
+            <a href="index.php"><p>LOGO</p></a>
         </div>
-        <div class="col-8 pt-2 pb-2">
-            <p>J'ai pas d'inspi pour le nom du site</p>
+        <div class="col-10 col-md-8 pt-2 pb-2">
+            <a href="index.php"><p>Nom du site</p></a>
         </div>
-        <div class="col-2 pt-2 pb-2">
+        <div style="position: absolute; right: 40px; top: 5px;">
             <?php
             // Check if pseudo is no't empty
             if (!empty($_SESSION['pseudo'])) {
@@ -39,14 +40,19 @@
             // Foreach for check if the user is connected or no
             foreach ($create as $key => $value) {
               if ($value['verif_connect'] == 0) {
-                echo "<a href='deconnexion.php'>Se Déconnecter</a>";
+                echo "<i id='profil' class='fas fa-user-alt fa-2x'></i>";
+                echo "<div id='viewprofil' style='position: absolute; background-color: white; margin-top: 15px;right: -35px; z-index: 5; border: 1px solid #d5d5d5; display: none;' class='text-center'>
+                  <a href='profil.php'><i class='w-100 p-2 fas fa-user-alt'><br> Profil</i></a>
+                  <a href='deconnexion.php'><i class='w-100 p-2 fas fa-lock-open'> Disconnect</i></a>
+                </div>";
               }
             }
             // if the user is no't connected make se connecter
           }else {
-                echo "<a href='inscription.php'>Se connecter</a>";
+                echo "<a href='inscription.php'>S'inscrire / Connexion</a>";
             }
            ?>
         </div>
       </div>
+
     </header>

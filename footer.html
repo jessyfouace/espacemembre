@@ -8,7 +8,21 @@
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
-
+<script type="text/javascript">
+  document.getElementById('profil').onclick = function() {viewprofil()};
+  var viewclick = 0
+  function viewprofil(){
+    viewclick++;
+    if (viewclick == 1) {
+      document.getElementById('viewprofil').style.display="block";
+      // viewclick = 0;
+    }
+    if (viewclick == 2) {
+      document.getElementById('viewprofil').style.display="none";
+      viewclick = 0;
+    }
+  }
+</script>
 <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
 <script>
   window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
